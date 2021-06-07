@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Task</title>
+  <meta charset="utf-8">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <!-- Bootstrap CSS -->
+    <link
+
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+    crossorigin="anonymous"/>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+   <style>
+
+  .hero {
+  min-height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1487528278747-ba99ed528ebc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.hero-tagline {
+  font-size: 3rem;
+  color:white;
+  padding:50px;
+
+}
+.hero-text {
+  font-family: "Times New Roman", Times, serif;
+  color: black;
+  background-color:#cccccccc;
+
+}
+
+.btn:hover {
+  box-shadow: 0 8px 4px 0 red;
+  font-size: medium;
+
+}
+
+.footer{
+  padding:50px;
+  font-size:1.5rem;
+  background-color:black;
+  color:white;
+
+}
+
+</style>
+
+
+
+
+
+</head>
+<body>
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Jumpstart</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="http://127.0.0.1:8000/admin/Jumpstart/details/">Basics</a></li>
+        <li><a href="http://127.0.0.1:8000/admin/Jumpstart/details/">Intermediate</a></li>
+          <li><a href="http://127.0.0.1:8000/admin/Jumpstart/details/">Expert</a></li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://127.0.0.1:8000/admin/"><span class="glyphicon glyphicon-user"></span>Login</a></li>
+        <li><a href="http://127.0.0.1:8000/admin/logout/"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!--hero start-->
+    <section class="hero d-flex align-items-center">
+      <div class="container text-center rellax">
+        <span class="text-white font-weight-bold hero-tagline">
+          Just_passion
+        </span>
+        <h3><p class="text-white font-weight-bold hero-text " >
+         Follow your heart. Every great dream begins with a dreamer. Always remember, you have within you the strength, the patience, and the passion to reach for the stars to change the world.
+        </p></h3>
+        <a
+          class="btn btn-warning smooth font-weight-bold btn-outline-dark btn-lg mt-3 mt-md-5"
+        href="#intro"
+          >
+
+          Scroll down
+        </a>
+      </div>
+    </section>
+
+    <!--hero end-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+<script>
+  var rellax = new Rellax('.rellax');
+</script>
+<script src="smoothscroll.js"></script>
+
+
+<div>
+
+<h1>
+    Welcome all
+</h1>
+</div>
+
+
+
+
+<section id="intro">
+    <ol>
+        {% for x in ac %}
+        <li>
+            <a href="http://127.0.0.1:8000/admin/Jumpstart/details/">{{x.Levelname}}</a>
+        </li>
+        {% endfor %}
+    </ol>
+</section>
+
+
+<!--footer start-->
+<footer class="footer">
+        <div>
+          <h3>
+            Thank you visit again
+          </h3>
+
+        </div>
+        <div>
+        &copy;2020 CC | All rights reserved
+        </div>
+
+</footer>
+ <!--footer end-->
+
+
+</body>
+</html>
